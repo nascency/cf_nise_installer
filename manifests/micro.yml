@@ -13,6 +13,8 @@ jobs:
   - uaa
   - login
   - collector
+  - mongodb_node
+  - mongodb_gateway
 - name: micro_ng
   template:
   - cloud_controller_ng
@@ -230,3 +232,27 @@ properties:
   service_lifecycle:
     serialization_data_server:
       - 127.0.0.1
+
+  mongodb:
+     free:
+       job_management:
+         high_water: 3000
+         low_water: 100
+       configuration:
+         allow_over_provisioning: true
+         capacity: 200
+         quota_files: 4
+         max_clients: 500
+
+
+  mongodb_gateway:
+     check_orphan_interval: 7200
+     token: "0xfeedface"
+     supported_versions: ["1.8", "2.0"]
+     version_aliases:
+       current: "2.0"
+       deprecated: "1.8"
+
+  mongodb_node:
+    supported_versions: ["1.8", "2.0"]
+    default_version: "1.8"
