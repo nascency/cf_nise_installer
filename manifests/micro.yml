@@ -13,8 +13,11 @@ jobs:
   - uaa
   - login
   - collector
-  - mongodb_node
-  - mongodb_gateway
+  - postgresql_gateway
+  - postgresql_node
+  - mysql_node
+  - mysql_gateway
+
 - name: micro_ng
   template:
   - cloud_controller_ng
