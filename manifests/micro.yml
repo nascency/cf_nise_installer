@@ -15,8 +15,6 @@ jobs:
   - collector
   - postgresql_gateway
   - postgresql_node
-#  - mysql_node
-#  - mysql_gateway
 
 - name: micro_ng
   template:
@@ -261,26 +259,26 @@ properties:
     default_version: "1.8"
 
   service_plans:
-    postgresql:
-      default:
-        job_management:
-          high_water: 1400
-          low_water: 100
-        configuration:
-          lifecycle:
-            enable: false
-          warden:
-            enable: false
-   postgresql_node:
-     supported_versions:
-     - '9.1'
-     default_version: '9.1'
-     password: c1oudc0wc1oudc0w
-   postgresql_gateway:
-     cc_api_version: v2
-     token: c1oudc0wc1oudc0w
-     default_plan: default
-     supported_versions:
-     - '9.1'
-     version_aliases:
-       current: '9.1'
+     postgresql:
+       default:
+         job_management:
+           high_water: 1400
+           low_water: 100
+         configuration:
+           lifecycle:
+             enable: false
+           warden:
+             enable: false
+     postgresql_node:
+       supported_versions:
+         - '9.1'
+       default_version: '9.1'
+       password: c1oudc0wc1oudc0w
+     postgresql_gateway:
+       cc_api_version: v2
+       token: c1oudc0wc1oudc0w
+       default_plan: default
+       supported_versions:
+         - '9.1'
+       version_aliases:
+         current: '9.1'
