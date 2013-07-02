@@ -275,6 +275,7 @@ properties:
        default_version: '9.1'
        password: c1oudc0wc1oudc0w
      postgresql_gateway:
+       admin_user: pg_admin
        cc_api_version: v2
        token: c1oudc0wc1oudc0w
        default_plan: default
